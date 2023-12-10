@@ -1,9 +1,8 @@
 #include "plant.h"
 
-void main()
-{
+void main() {
     int size = 0;
-    Plant *plants = malloc(sizeof(Plant) * size);
+    Plant *plants = malloc(sizeof(Plant) * 10);
 
     Plant redRose = {"Red rose", 1.72, ROSE, RED, 4};
     Plant yellowDaffodil = {"Yellow daffodil", 1.65, DAFFODIL, YELLOW, 12};
@@ -14,7 +13,7 @@ void main()
     addPlant(plants, &size, pinkLily);
 
     Plant plant = getPlantFromInput();
-    // addPlant(plants, &size, plant);
+    addPlant(plants, &size, plant);
 
     displayFlowers(plants, size);
     printf("\n\n");
