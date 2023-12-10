@@ -14,6 +14,4 @@ FlowerColor askFlowerColor();
 
 void swap(Plant *a, Plant *b);
 
-void printColored(int color, const char *__format, ...);
-
 #endif
