@@ -16,7 +16,7 @@ void sortByPlant(Plant *plants, int size) {
     do {
         swapped = false;
         for (int i = left; i < right; i++) {
-            if (plants[i].plant[0] <= plants[i + 1].plant[0]) continue;
+            if (plants[i].plant[0] >= plants[i + 1].plant[0]) continue;
             swap(&plants[i], &plants[i + 1]);
             swapped = true;
         }
@@ -24,7 +24,7 @@ void sortByPlant(Plant *plants, int size) {
         if (!swapped) break;
         swapped = false;
         for (int i = right; i > left; i--) {
-            if (plants[i - 1].plant[0] <= plants[i].plant[0]) continue;
+            if (plants[i - 1].plant[0] >= plants[i].plant[0]) continue;
             swap(&plants[i], &plants[i - 1]);
             swapped = true;
         }
@@ -40,7 +40,7 @@ void sortByFlowersCount(Plant *plants, int size) {
     do {
         swapped = false;
         for (int i = left; i < right; i++) {
-            if (plants[i].flowersCount <= plants[i + 1].flowersCount) continue;
+            if (plants[i].flowersCount >= plants[i + 1].flowersCount) continue;
             swap(&plants[i], &plants[i + 1]);
             swapped = true;
         }
@@ -48,7 +48,7 @@ void sortByFlowersCount(Plant *plants, int size) {
         if (!swapped) break;
         swapped = false;
         for (int i = right; i > left; i--) {
-            if (plants[i - 1].flowersCount <= plants[i].flowersCount) continue;
+            if (plants[i - 1].flowersCount >= plants[i].flowersCount) continue;
             swap(&plants[i], &plants[i - 1]);
             swapped = true;
         }
